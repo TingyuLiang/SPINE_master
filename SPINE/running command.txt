@@ -1,0 +1,20 @@
+Run in your own CPU/GPU
+
+python3 /home/tingyu/Desktop/Deep\ Learning/project/SPINE-master_0704/code/model/main.py --input /home/tingyu/Desktop/Deep\ Learning/project/SPINE-master_0704/test_1/test_data/glove_original_15k_300d_train.txt --num_epochs 4000 --denoising --noise 0.4 --sparsity 0.85 --output /home/tingyu/Desktop/Deep\ Learning/project/SPINE-master_0704/test_1/test_result/glove_SPINE_output.txt --hdim 1000 --k 3
+--batch_size 64
+
+
+python3 /home/tingyu/Desktop/Deep\ Learning/project/SPINE-master_0704/code/model/main.py --input /home/tingyu/Desktop/Deep\ Learning/project/SPINE-master_0704/test_1/test_data/word2vec_original_15k_300d_train.txt --num_epochs 4000 --denoising --noise 0.2 --sparsity 0.85 --output /home/tingyu/Desktop/Deep\ Learning/project/SPINE-master_0704/test_1/test_result/word2vec_SPINE_output.txt --hdim 1000 --k 5 --batch_size 64
+
+
+
+Run in google colab
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+!python /content/drive/My\ Drive/SPINE-master/code/model/main.py --input /content/drive/My\ Drive/SPINE-master/test_0620/word2vec_original_15k_300d_train.txt --num_epochs 4000 --denoising --noise 0.2 --sparsity 0.85 --output /content/drive/My\ Drive/SPINE-master/test_0620/word2vec_SPINE_output.txt --hdim 1000 --k 5 --batch_size 256
+
+
+!python /content/drive/My\ Drive/SPINE-master/code/model/main.py --input /content/drive/My\ Drive/SPINE-master/test_0620/glove_original_15k_300d_train.txt --num_epochs 4000 --denoising --noise 0.4 --sparsity 0.85 --output /content/drive/My\ Drive/SPINE-master/test_0620/glove_SPINE_output.txt --hdim 1000 --k 5 --batch_size 64
